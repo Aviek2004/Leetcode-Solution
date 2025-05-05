@@ -1,11 +1,3 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <sstream>
-#include <map>
-
-using namespace std;
-
 string sortSentence(string s)
 {
     string word;
@@ -19,21 +11,11 @@ string sortSentence(string s)
             i++;
         }
         else word = word + s[i];
-    }
-    string ans;
+    }    string ans;
     for(string x:v)
     {
         ans = ans+x;
     }
     ans.pop_back();
     return ans;
-}
-
-int main() {
-    string sentence;
-    cout << "Enter the sentence: ";
-    getline(cin, sentence);
-    string sortedSentence = sortSentence(sentence);
-    cout << "Sorted sentence: " << sortedSentence << endl;
-    return 0;
 }
